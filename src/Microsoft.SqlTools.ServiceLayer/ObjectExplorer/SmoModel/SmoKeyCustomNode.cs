@@ -73,7 +73,7 @@ namespace Microsoft.SqlTools.ServiceLayer.ObjectExplorer.SmoModel
     {
         internal static string GetCustomLabel(object context)
         {
-            Index index = context as Index;
+            Microsoft.SqlServer.Management.Smo.Index index = context as Microsoft.SqlServer.Management.Smo.Index;
             if (index != null)
             {
                 string name = index.Name;
@@ -89,7 +89,7 @@ namespace Microsoft.SqlTools.ServiceLayer.ObjectExplorer.SmoModel
         internal static string GetSubType(object context)
         {
 
-            Index index = context as Index;
+            Microsoft.SqlServer.Management.Smo.Index index = context as Microsoft.SqlServer.Management.Smo.Index;
             if (index != null)
             {
                 switch (index.IndexKeyType)

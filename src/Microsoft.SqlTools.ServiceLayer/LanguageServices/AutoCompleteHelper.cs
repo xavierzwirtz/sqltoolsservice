@@ -634,7 +634,7 @@ namespace Microsoft.SqlTools.ServiceLayer.LanguageServices
                 return new Hover()
                 {
                     Contents = markedStrings,
-                    Range = new Range
+                    Range = new Microsoft.SqlTools.ServiceLayer.Workspace.Contracts.Range
                     {
                         Start = new Position
                         {

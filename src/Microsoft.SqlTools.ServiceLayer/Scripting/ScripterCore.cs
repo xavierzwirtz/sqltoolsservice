@@ -355,7 +355,7 @@ namespace Microsoft.SqlTools.ServiceLayer.Scripting
                     new Location 
                     {
                         Uri = tempFileName,
-                        Range = new Range 
+                        Range = new Microsoft.SqlTools.ServiceLayer.Workspace.Contracts.Range 
                         {
                             Start = new Position { Line = lineNumber, Character = 0},
                             End = new Position { Line = lineNumber + 1, Character = 0}

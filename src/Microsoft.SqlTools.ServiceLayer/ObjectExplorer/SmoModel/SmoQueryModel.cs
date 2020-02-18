@@ -412,7 +412,7 @@ namespace Microsoft.SqlTools.ServiceLayer.ObjectExplorer.SmoModel
     [Export(typeof(SmoQuerier))]
     internal partial class SqlIndexQuerier: SmoQuerier
     {
-        Type[] supportedTypes = new Type[] { typeof(Index) };
+        Type[] supportedTypes = new Type[] { typeof(Microsoft.SqlServer.Management.Smo.Index) };
 
         public override Type[] SupportedObjectTypes { get { return supportedTypes; } }
 
@@ -425,7 +425,7 @@ namespace Microsoft.SqlTools.ServiceLayer.ObjectExplorer.SmoModel
                 if (retValue != null)
                 {
                     retValue.ClearAndInitialize(filter, extraProperties);
-                    return new SmoCollectionWrapper<Index>(retValue).Where(c => PassesFinalFilters(parentTableViewTableTypeBase, c));
+                    return new SmoCollectionWrapper<Microsoft.SqlServer.Management.Smo.Index>(retValue).Where(c => PassesFinalFilters(parentTableViewTableTypeBase, c));
                 }
             }
             return Enumerable.Empty<SqlSmoObject>();

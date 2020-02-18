@@ -83,7 +83,7 @@ namespace Microsoft.SqlTools.ServiceLayer.LanguageServices
             {
                 Severity = MapDiagnosticSeverity(scriptFileMarker.Level),
                 Message = scriptFileMarker.Message,
-                Range = new Range
+                Range = new Microsoft.SqlTools.ServiceLayer.Workspace.Contracts.Range
                 {
                     Start = new Position
                     {

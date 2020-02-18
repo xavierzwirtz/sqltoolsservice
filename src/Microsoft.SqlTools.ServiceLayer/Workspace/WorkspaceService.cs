@@ -348,7 +348,7 @@ namespace Microsoft.SqlTools.ServiceLayer.Workspace
         /// </summary>
         /// <param name="changeRange"></param>
         /// <param name="insertString"></param>       
-        private static FileChange GetFileChangeDetails(Range changeRange, string insertString)
+        private static FileChange GetFileChangeDetails(Microsoft.SqlTools.ServiceLayer.Workspace.Contracts.Range changeRange, string insertString)
         {
             // The protocol's positions are zero-based so add 1 to all offsets
             return new FileChange

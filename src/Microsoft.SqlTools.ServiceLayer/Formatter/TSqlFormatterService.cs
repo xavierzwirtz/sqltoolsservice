@@ -224,7 +224,7 @@ namespace Microsoft.SqlTools.ServiceLayer.Formatter
 
             TextEdit edit = new TextEdit
             {
-                Range = new Range { Start = start, End = end }
+                Range = new Microsoft.SqlTools.ServiceLayer.Workspace.Contracts.Range { Start = start, End = end }
             };
             return edit;
         }
@@ -300,7 +300,7 @@ namespace Microsoft.SqlTools.ServiceLayer.Formatter
 
     internal static class RangeExtensions
     {
-        public static BufferRange ToBufferRange(this Range range)
+        public static BufferRange ToBufferRange(this Microsoft.SqlTools.ServiceLayer.Workspace.Contracts.Range range)
         {
             // It turns out that VSCode sends Range objects as 0-indexed lines, while
             // our BufferPosition and BufferRange logic assumes 1-indexed. Therefore
